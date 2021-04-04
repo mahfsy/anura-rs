@@ -1,0 +1,25 @@
+[package]
+name = "anura"
+version = "0.1.0"
+authors = ["mahfsy <mahfsy@protonmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+hecs = "*"
+glam = "*"
+anymap = "*"
+time = "*"
+lazy_static = "*"
+
+gfx = { version = "0.17", optional = true }
+glutin = { version = "0.12", optional = true }
+gfx_window_glutin = { version = "0.20", optional = true }
+
+[features]
+build-client = ["gfx", "glutin", "gfx_window_glutin"]
+
+[[bin]]
+name = "client"
+required-features = ["build-client"]

@@ -1,0 +1,8 @@
+
+struct ServerPlayer {
+    
+}
+
+fn main() {
+    
+}
